@@ -30,7 +30,7 @@ export default function Home() {
       
       {/* Main content should render if both iframes have loaded */}
       {loadingProject1 || loadingProject2 ? '' :(<Navbar/>)}
-      {(loadingProject1 || loadingProject2) && <LoadingComponent />}
+      {(loadingProject1 && loadingProject2) && <LoadingComponent />}
       <div className="flex flex-col items-center justify-center py-20 text-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : 'flex' }}  >
         <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-2" draggable={false}/>
         <div className="border w-3/4 sm:w-2/4 m:w-1/4 lg:w-1/4 xl:w-1/4 mt-6"></div>
