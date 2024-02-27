@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navbar({ page }) {
-  // Function to determine if the link is active
+  const [isOpen, setIsOpen] = useState(false);
   const isActive = (currentPage) => page === currentPage;
-  console.log(page)
+  const dropdownMaxHeight = isOpen ? "500px" : "0px";
 
   return (
     <nav className="primary-bg flex justify-between items-center even-shadow border-b-2 border-stone-950 text-white p-8 font-medium text-xl mx-auto sticky top-0 z-40">
@@ -12,23 +13,26 @@ export default function Navbar({ page }) {
           <img src="/assets/yswhite.png" alt="Logo" className="h-8 mr-4 cursor-pointer" draggable={false} />
         </Link>
       </div>
-      <ul className="flex justify-end space-x-4">
-        <li className={isActive('/') ? 'border-b-2 border-white' : ''}>
-          <Link href="/">
-            <span className="hover:text-stone-400 cursor-pointer">Home</span>
-          </Link>
-        </li>
-        <li className={isActive('about') ? 'border-b-2 border-white' : ''}>
-          <Link href="/about">
-            <span className="hover:text-stone-400 cursor-pointer">About</span>
-          </Link>
-        </li>
-        <li className={isActive('resume') ? 'border-b-2 border-white' : ''}>
-          <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-stone-400 cursor-pointer">
-            Resume
-          </a>
-        </li>
-      </ul>
+      <div className="md:hidden">
+        <button onClick={() => setIsOpen(!isOpen)}>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <div className={`absolute top-full right-0 left-0 w-full primary-bg md:relative md:top-auto md:right-auto md:left-auto md:mt-0 md:w-auto shadow-lg md:shadow-0 border-b-2 md:border-b-0 ${isOpen ? 'flex text-center justify-center mt-0 py-2' : 'hidden'} md:block`}>
+        <ul className={`md:flex justify-end space-x-0 md:space-x-4`}>
+          <li className={isActive('/') ? 'border-b-2 border-white' : ''}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={isActive('about') ? 'border-b-2 border-white' : ''}>
+            <Link href="/about">About</Link>
+          </li>
+          <li className={isActive('resume') ? 'border-b-2 border-white' : ''}>
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

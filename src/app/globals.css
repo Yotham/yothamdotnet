@@ -60,3 +60,12 @@ body {
 .skill-icon:hover {
   transform: scale(1.1);
 }
+.nav-dropdown-transition {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+
+.nav-dropdown-transition-0 {
+  transition: none;
+  overflow: auto;
+}
