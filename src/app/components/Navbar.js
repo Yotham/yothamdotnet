@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="primary-bg flex justify-between items-center even-shadow border-b-2 border-stone-950 text-white p-8 font-medium text-xl mx-auto sticky top-0 z-40">
       <div className="flex items-center">
         <Link href="/">
-          <img src="/assets/yswhite.png" alt="Logo" className="h-8 mr-4 cursor-pointer" />
+          <img src="/assets/yswhite.png" alt="Logo" className="h-8 mr-4 cursor-pointer" draggable={false} />
         </Link>
       </div>
       <ul className="flex justify-end space-x-4">
