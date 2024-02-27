@@ -30,12 +30,12 @@ export default function Home() {
       
       {/* Main content should render if both iframes have loaded */}
       {loadingProject1 || loadingProject2 ? '' :(<Navbar page = '/'/>)}
-      {(loadingProject1 || loadingProject2) && <LoadingComponent />}
+      {(loadingProject1 && loadingProject2) && <LoadingComponent />}
       <div className="flex flex-col items-center justify-center py-20 text-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : 'flex' }}  >
         <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-2" draggable={false}/>
         <div className="border w-3/4 sm:w-2/4 m:w-1/4 lg:w-1/4 xl:w-1/4 mt-6"></div>
         <h1 className="text-4xl font-mediym mt-4">Yotham Sage</h1>
-        <p className="text-xl mt-2">Software Engineer</p>
+        <p className="text-xl mt-2">Software Developer</p>
         {/* Icons Container */}
         <div className="flex mt-4 space-x-4">
           {/* LinkedIn and GitHub Icons */}
@@ -55,7 +55,7 @@ export default function Home() {
         <EmailModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       {/* Projects Section */}
-      <div className="py-12 bg-white" style={{ display: loadingProject1 || loadingProject2 ? 'none' : '' }}>
+      <div className="py-12 bg-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : '' }}>
         <h2 className ="text-center pb-12 text-4xl font-medium">Projects</h2>
         <div className="max-w-xl lg:max-w-6xl xl:max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 sm-grid-cols-2 md-grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
