@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.js"
 import Footer from "./components/Footer.js"
 import EmailModal from "./components/EmailModal.js";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import Head from 'next/head';
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loadingProject1, setLoadingProject1] = useState(true); // Loading state for Project 1
@@ -23,13 +24,15 @@ export default function Home() {
   );
   return (
     <div>
-
+      <Head>
+        <link rel="icon" href="/assets/favicon.ico" />
+      </Head>
       
       {/* Main content should render if both iframes have loaded */}
       {loadingProject1 || loadingProject2 ? '' :(<Navbar/>)}
       {(loadingProject1 || loadingProject2) && <LoadingComponent />}
       <div className="flex flex-col items-center justify-center py-20 text-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : 'flex' }}  >
-        <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-2" />
+        <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-2" draggable={false}/>
         <div className="border w-3/4 sm:w-2/4 m:w-1/4 lg:w-1/4 xl:w-1/4 mt-6"></div>
         <h1 className="text-4xl font-mediym mt-4">Yotham Sage</h1>
         <p className="text-xl mt-2">Software Engineer</p>

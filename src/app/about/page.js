@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 import CIcon from "../components/c"
-import Image from 'next/image.js';
+import Head from 'next/head.js';
 // Import skill icons from React Icons or any other library
 import { FaPython, FaJsSquare, FaDatabase, FaReact, FaLinux, FaHtml5, FaCss3Alt,FaCode } from 'react-icons/fa';
 import { SiCplusplus, SiSap, SiNextdotjs, SiMongodb, SiPostgresql } from 'react-icons/si'; // For C++ and Java, SAP, Next.js, MongoDB, and Postgres
@@ -36,10 +36,13 @@ export default function About() {
   }
   return (
     <div>
+      <Head>
+        <link rel="icon" href="/assets/favicon.ico" />
+      </Head>
       <Navbar/>
       {/* About Section */}
       <div className="flex flex-col items-center justify-center py-20 text-white ">
-        <img src="/assets/fam.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-2 border-white" />
+        <img src="/assets/fam.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-2 border-white" draggable={false} />
         <h2 className="text-4xl font-medium mt-4">About Me</h2>
         <p className="mt-4 max-w-2xl text-center">
         My name is Yotham. I am completing my senior year at Rennselear Polytechnic Institute, where I am studying <strong>Computer Science</strong>. My last internship was at <strong>General Electric</strong> where I worked as a Digital Technology Intern and helped my team to create project solutions, standarize work, and automate work flows. Most recently I have been leading a team of 4 developers to create a web and mobile application called <strong>ShopEasy</strong>.
