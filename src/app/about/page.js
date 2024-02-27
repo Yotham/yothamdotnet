@@ -39,7 +39,7 @@ export default function About() {
       <Head>
         <link rel="icon" href="/assets/favicon.ico" />
       </Head>
-      <Navbar/>
+      <Navbar page = 'about'/>
       {/* About Section */}
       <div className="flex flex-col items-center justify-center py-20 text-white ">
         <img src="/assets/fam.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-2 border-white" draggable={false} />
