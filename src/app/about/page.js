@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 import CIcon from "../components/c"
+import Image from 'next/image.js';
 // Import skill icons from React Icons or any other library
 import { FaPython, FaJsSquare, FaDatabase, FaReact, FaLinux, FaHtml5, FaCss3Alt,FaCode } from 'react-icons/fa';
 import { SiCplusplus, SiSap, SiNextdotjs, SiMongodb, SiPostgresql } from 'react-icons/si'; // For C++ and Java, SAP, Next.js, MongoDB, and Postgres

@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import React, { useState } from 'react';
 import Navbar from "./components/Navbar.js"
 import Footer from "./components/Footer.js"
@@ -64,7 +63,7 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-2xl font-medium">ShopEasy</h3>
-                <p className="mt-2">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user's dietary needs, from a selected grocery store.</p>
+                <p className="mt-2">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
               </div>
             </div>
 
@@ -75,7 +74,7 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-2xl font-medium">Best Professors</h3>
-                <p className="mt-2">A web application, which compiles the ratings of RPI professors into one place. Allowing the user's to search by professor or course code. When searched by course code it will display the professors in order of their rankings.</p>
+                <p className="mt-2">A web application, which compiles the ratings of RPI professors into one place. Allowing the user{"'"}s to search by professor or course code. When searched by course code it will display the professors in order of their rankings.</p>
               </div>
             </div>
           </div>
