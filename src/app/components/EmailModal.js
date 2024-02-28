@@ -17,16 +17,15 @@ function EmailModal({ isOpen, onClose }) {
       console.error('Failed to fetch the keys');
       return;
     }
-
-
+    
     const email = e.target.email.value;
     const message = e.target.message.value;
     const fullMessage = `Email: ${email}\n\n${message}`;
 
     // Use the fetched keys in the emailjs.send method
-    emailjs.send(keys.EMAILJS_SERVICE_ID, keys.EMAILJS_TEMPLATE_ID, {
+    emailjs.send('service_nr7jzj9', 'template_osx54eh', {
       message: fullMessage,
-    }, keys.EMAILJS_USER_ID)
+    }, 'KkjkhW8yAtrCx3rHJ')
       .then((result) => {
         console.log(result.text);
         onClose()
