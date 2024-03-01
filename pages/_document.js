@@ -7,14 +7,21 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Google Analytics Tag */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-762H0R0468"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-762H0R0468"
+            ></script>
+            <script
+            dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-762H0R0468');
+                `,
+            }}
+            ></script>
 
-            gtag('config', 'G-762H0R0468');
-            </script>
         </Head>
         <body>
           <Main />
