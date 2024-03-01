@@ -26,15 +26,7 @@ export default function Home() {
     <div>
       <Head>
         <link rel="icon" href="/assets/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-762H0R0468"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-762H0R0468');
-        </script>
-              </Head>
+      </Head>
       
       {/* Main content should render if both iframes have loaded */}
       {loadingProject1 || loadingProject2 ? '' :(<Navbar page = '/'/>)}
