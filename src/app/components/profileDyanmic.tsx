@@ -11,6 +11,7 @@ export const EvervaultCard = ({
 }: {
   text?: string;
   className?: string;
+  children?: React.ReactNode; // Include this line
 }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
