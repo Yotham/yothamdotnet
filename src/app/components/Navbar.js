@@ -22,13 +22,13 @@ export default function Navbar({ page }) {
       </div>
       <div className={`absolute top-full right-0 left-0 w-full primary-bg md:relative md:top-auto md:right-auto md:left-auto md:mt-0 md:w-auto shadow-lg md:shadow-0 border-b-2 md:border-b-0 ${isOpen ? 'flex text-center justify-center mt-0 py-2' : 'hidden'} md:block`}>
         <ul className={`md:flex justify-end space-x-0 md:space-x-4`}>
-          <li className={isActive('/') ? 'border-b-2 border-white' : ''}>
+          <li className={isActive('/') ? 'bg-gray-200 p-2 text-black rounded-lg' : 'p-2'}>
             <Link href="/">Home</Link>
           </li>
-          <li className={isActive('about') ? 'border-b-2 border-white' : ''}>
+          <li className={isActive('about') ? 'bg-gray-200 p-2 text-black rounded-lg' : 'p-2'}>
             <Link href="/about">About</Link>
           </li>
-          <li className={isActive('resume') ? 'border-b-2 border-white' : ''}>
+          <li className={isActive('resume') ? 'bg-gray-200 p-2 text-black rounded-lg' : 'p-2'}>
             <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </li>
         </ul>
