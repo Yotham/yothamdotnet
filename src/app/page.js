@@ -5,6 +5,8 @@ import Footer from "./components/Footer.js"
 import EmailModal from "./components/EmailModal.js";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import Head from 'next/head';
+import { EvervaultCard } from './components/profileDyanmic'
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loadingProject1, setLoadingProject1] = useState(true); // Loading state for Project 1
@@ -31,28 +33,29 @@ export default function Home() {
       {/* Main content should render if both iframes have loaded */}
       {loadingProject1 || loadingProject2 ? '' :(<Navbar page = '/'/>)}
       {(loadingProject1 && loadingProject2) && <LoadingComponent />}
-      <div className="flex flex-col items-center justify-center py-20 text-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : 'flex' }}  >
-        <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-2" draggable={false}/>
-        <div className="border w-3/4 sm:w-2/4 m:w-1/4 lg:w-1/4 xl:w-1/4 mt-6"></div>
-        <h1 className="text-4xl font-mediym mt-4">Yotham Sage</h1>
+      <div className=" text-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : 'flex' }}  >
+
+      <EvervaultCard text="Yotham Sage" className="w-full h-full">
+        {/* Profile-specific content goes here, passed as children to EvervaultCard */}
+        <img src="assets/profilepic.jpg" alt="Profile Picture" className="rounded-lg w-40 h-40 object-cover even-shadow border-4" draggable={false}/>
+        <div className="border w-full mt-6"></div>
+        <h1 className="text-4xl font-medium mt-4">Yotham Sage</h1>
         <p className="text-xl mt-2">Software Developer</p>
-        {/* Icons Container */}
         <div className="flex mt-4 space-x-4">
-          {/* LinkedIn and GitHub Icons */}
           <a href="https://www.linkedin.com/in/yothamsage" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
             <FaLinkedin size="1.5em" />
           </a>
           <a href="https://github.com/yotham" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
             <FaGithub size="1.5em" />
           </a>
-          {/* Mail Icon that opens the modal */}
           <button onClick={openModal} className="hover:text-gray-300">
             <FaEnvelope size="1.5em" />
           </button>
         </div>
-
-        {/* Modal for Email */}
         <EmailModal isOpen={isModalOpen} onClose={closeModal} />
+      </EvervaultCard>
+
+
       </div>
       {/* Projects Section */}
       <div className="py-12 bg-white" style={{ display: loadingProject1 && loadingProject2 ? 'none' : '' }}>
