@@ -71,7 +71,7 @@ export default function Home() {
               <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '640px', maxHeight: '360px' }}> {/* Adjust the maxWidth and maxHeight to your preference */}
                 <iframe className="w-full h-full rounded-lg border-2 border-gray-200" src="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview" allowFullScreen onLoad={() => {console.log("Project 1 iframe loaded"); setLoadingProject1(false)}} style={{ minWidth: '480px', minHeight: '270px' }}></iframe> {/* Inline style for minimum size, adjust as needed */}
               </div>
-              <p className="max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user's dietary needs, from a selected grocery store.</p>
+              <p className="max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
             </div>
             <div className="mt-8">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 justify-start text-center text-xl font-medium items-center">
