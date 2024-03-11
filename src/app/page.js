@@ -67,20 +67,20 @@ export default function Home() {
                 <FaGithub size="3em"/>
               </a>
             </div>
-            <div className="flex gap-8">
-              <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '640px', maxHeight: '360px' }}> {/* Adjust the maxWidth and maxHeight to your preference */}
+            <div className="flex flex-col sm:flex-col md:flex-col lg-flex-row xl:flex-row gap-8">
+              <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '50%', maxHeight: '50%' }}>
                 <iframe className="w-full h-full rounded-lg border-2 border-gray-200" src="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview" allowFullScreen onLoad={() => {console.log("Project 1 iframe loaded"); setLoadingProject1(false)}} style={{ minWidth: '480px', minHeight: '270px' }}></iframe> {/* Inline style for minimum size, adjust as needed */}
               </div>
               <p className="max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
             </div>
             <div className="mt-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 justify-start text-center text-xl font-medium items-center">
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Node.js</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Express</div>
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-xl font-medium items-center">
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Python</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React.js</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Next.js</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">MongoDB</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Tailwind CSS</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Firebase</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">HTML</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Tailwind CSS</div> 
               </div>
             </div>
 
@@ -93,20 +93,19 @@ export default function Home() {
                 <FaGithub size="3em"/>
               </a>
             </div>
-            <div className="flex gap-8">
-              <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '640px', maxHeight: '360px' }}> {/* Adjust the maxWidth and maxHeight to your preference */}
+            <div className="flex flex-col sm:flex-col md:flex-col lg-flex-row xl:flex-row gap-8">
+              <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '50%', maxHeight: '50%' }}> {/* Adjust the maxWidth and maxHeight to your preference */}
                 <iframe className="w-full h-full rounded-lg border-2 border-gray-200" src="https://drive.google.com/file/d/1ntfL0C3FoJT6tlMegHRp-vR-SjoUZEPJ/preview" allowFullScreen onLoad={() => {console.log("Project 1 iframe loaded"); setLoadingProject2(false)}} style={{ minWidth: '480px', minHeight: '270px' }}></iframe> {/* Inline style for minimum size, adjust as needed */}
               </div>
               <p className="max-w-xl">A web application, which compiles the ratings of RPI professors into one place. Allowing the user{"'"}s to search by professor or course code. When searched by course code it will display the professors in order of their rankings.</p>
             </div>
             <div className="mt-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 justify-start text-center text-xl font-medium items-center">
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Node.js</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Express</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">MongoDB</div>
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-xl font-medium items-center">
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Python</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React.js</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">AWS Amplify</div>
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">HTML</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Tailwind CSS</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Firebase</div>
               </div>
             </div>
 
