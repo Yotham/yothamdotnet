@@ -67,63 +67,63 @@ export default function About() {
         <img src="/assets/fam.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-4 border-gray-200" draggable={false} />
         
         <h2 className="text-4xl font-medium mt-4">About Me</h2>
-        <p className="mt-4 mx-4 sm:mx-4 md:mx-0 lg:mx-0 xl:mx-0 max-w-2xl text-center ">
+        <p className="mt-4 mx-4 sm:mx-4 md:mx-0 lg:mx-0 xl:mx-0 max-w-2xl text-lg text-center ">
         {typedAboutText}
         </p>
       </div>
 
       {/* Skills Section */}
-      <div className="py-12 bg-gray-200 pb-14">
-        <h2 className="text-center pb-12 text-4xl font-medium">Skills</h2>
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
+      <div className="py-12 primary-bg pb-14">
+        <h2 className="text-center pb-12 text-4xl text-gray-200 font-medium">Skills</h2>
+        <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
           {/* Programming Languages */}
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1">
             <FaPython className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <FaJsSquare className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <SiCplusplus className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center pt-2 skill-icon">
+          <div className="flex flex-col items-center pt-2 skill-icon bg-gray-200 rounded-lg">
             {/* Placeholder for C */}
             <CIcon className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <DiJava className="text-6xl" /> 
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <FaHtml5 className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <FaCss3Alt className="text-6xl" />
           </div>
 
           {/* Databases */}
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <SiPostgresql className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <SiMongodb className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <PiFileSqlThin className="text-6xl" />
           </div>
 
           {/* Frameworks/Libraries */}
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <FaReact className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <SiNextdotjs className="text-6xl" />
           </div>
 
           {/* Tools/Operating Systems */}
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <FaLinux className="text-6xl" />
           </div>
-          <div className="flex flex-col items-center skill-icon ">
+          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
             <SiSap className="text-6xl" />
           </div>
         </div>
