@@ -107,7 +107,7 @@ export default function Home() {
           <div className="flex flex-col p-8  mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center">
             <div className="flex flex-row items-center mb-8 justify-between w-full">
               <h1 className="text-2xl md:text-4xl font-medium">Best Professors</h1>
-              <a href="https://github.com/yotham" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+              <a href="https://github.com/Yotham/BestProfessors" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                <FaGithub className="icon-standard" />
               </a>
             </div>
