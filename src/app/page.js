@@ -75,7 +75,7 @@ export default function Home() {
                   <img src="assets/shopeasyThumbnail.png" alt="Project Image" className="w-80 md:w-full md:max-w-xl rounded-lg object-cover border-2 border-gray-200 even-shadow" draggable={false} />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 bg-black opacity-50"></div>
-                  <button className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300">View Demo</button>
+                  <a href="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview" target="_blank" rel="noopener noreferrer" className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300">View Demo</a>
                   </div>
                 </div>
               <p className="max-w-xs md:max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
@@ -108,7 +108,7 @@ export default function Home() {
                   <img src="assets/BestProfessorsThumbnail.png" alt="Project Image" className="w-80 md:w-full md:max-w-xl rounded-lg object-cover border-2 border-gray-200 even-shadow" draggable={false} />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 bg-black opacity-50"></div>
-                  <button className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300">View Demo</button>
+                  <a href="https://drive.google.com/file/d/1ntfL0C3FoJT6tlMegHRp-vR-SjoUZEPJ/preview" target="_blank" rel="noopener noreferrer" className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300">View Demo</a>
                   </div>
                 </div>
               <p className="max-w-xs md:max-w-xl">A web application, which compiles the ratings of RPI professors into one place. Allowing the user{"'"}s to search by professor or course code. When searched by course code it will display the professors in order of their rankings.</p>
