@@ -92,7 +92,7 @@ export default function Home() {
               <p className="max-w-xs md:max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
             </div>
             <div className="mt-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-lg md:text-xl font-medium items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-md md:text-xl font-medium items-center">
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Python</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React.js</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Next.js</div>
@@ -125,7 +125,7 @@ export default function Home() {
               <p className="max-w-xs md:max-w-xl">A web application, which compiles the ratings of RPI professors into one place. Allowing the user{"'"}s to search by professor or course code. When searched by course code it will display the professors in order of their rankings.</p>
             </div>
             <div className="mt-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-lg md:text-xl font-medium items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-md md:text-xl font-medium items-center">
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Python</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React.js</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">AWS Amplify</div>
