@@ -75,7 +75,7 @@ export default function About() {
       {/* Skills Section */}
       <div className="py-12 primary-bg pb-14">
         <h2 className="text-center pb-12 text-4xl text-gray-200 font-medium">Skills</h2>
-        <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
+        <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-10 md:mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
           {/* Programming Languages */}
           <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1">
             <FaPython className="text-6xl" />

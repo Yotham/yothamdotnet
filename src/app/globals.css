@@ -69,3 +69,14 @@ body {
   transition: none;
   overflow: auto;
 }
+
+
+.icon-standard {
+  font-size: 1.5em; /* Default size */
+}
+
+@media (min-width: 768px) { /* Adjust the min-width as needed */
+  .icon-standard {
+    font-size: 3em; /* Larger size on medium screens and above */
+  }
+}
