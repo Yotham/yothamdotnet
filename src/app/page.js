@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar.js"
 import Footer from "./components/Footer.js"
 import EmailModal from "./components/EmailModal.js";
@@ -16,7 +16,14 @@ export default function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   
-  // Define a loading component
+  const [isLoading, setIsLoading] = useState(true); // State to control the loading state
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Set loading to false after 500 milliseconds
+    }, 1000);
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
   const LoadingComponent = () => (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <svg className="animate-spin -ml-1 mr-3 h-10 w-10 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -25,6 +32,10 @@ export default function Home() {
       </svg>
     </div>
   );
+  if (isLoading) {
+    return <LoadingComponent />;
+    
+  }
   return (
     <div>
       <Head>
