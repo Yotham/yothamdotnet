@@ -49,7 +49,7 @@ export default function About() {
       </svg>
     </div>
   );
-  const aboutText = "Hi my name is Yotham. I am completing my senior year at Rennselear Polytechnic Institute, where I am studying Computer Science. My last internship was at General Electric where I worked as a Digital Technology Intern and helped my team to create project solutions, standardize work, and automate work flows. Most recently I have been leading a team of 4 developers to create a web and mobile application called ShopEasy.";
+  const aboutText = "Hi my name is Yotham. I am completing my senior year at Rensselear Polytechnic Institute, where I am studying Computer Science. My last internship was at General Electric where I worked as a Digital Technology Intern and helped my team to create project solutions, standardize work, and automate work flows. Most recently I have been leading a team of 4 developers to create a web and mobile application called ShopEasy.";
   const typedAboutText = useTypewriter(aboutText, 50, !isLoading); // Start typing only when isLoading is false
 
   if (isLoading) {
