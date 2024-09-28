@@ -11,6 +11,7 @@ import { DiC, DiSqllite, DiJava} from 'react-icons/di'; // For C and a placehold
 import{
   PiFileSqlThin
 }from "react-icons/pi";
+import { EvervaultCard } from '../components/profileDynamic'
 
 const useTypewriter = (text, typingSpeed = 150, startTyping = false) => {
   const [typedText, setTypedText] = useState('');
@@ -49,7 +50,7 @@ export default function About() {
       </svg>
     </div>
   );
-  const aboutText = "Hi my name is Yotham. I am completing my senior year at Rensselaer Polytechnic Institute, where I am studying Computer Science. My last internship was at General Electric where I worked as a Digital Technology Intern and helped my team to create project solutions, standardize work, and automate work flows. Most recently I have been leading a team of 4 developers to create a web and mobile application called ShopEasy.";
+  const aboutText = "Hi, I’m Yotham. I recently graduated from Rensselaer Polytechnic Institute with a degree in Computer Science. Right now, I’m working as a Software Developer at Guidance Analytics.";
   const typedAboutText = useTypewriter(aboutText, 50, !isLoading); // Start typing only when isLoading is false
 
   if (isLoading) {
@@ -63,18 +64,18 @@ export default function About() {
       </Head>
       <Navbar page = 'about'/>
       {/* About Section */}
-      <div className="flex flex-col items-center justify-center py-20 text-gray-200 ">
-        <img src="/assets/fam.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-4 border-gray-200" draggable={false} />
-        
-        <h2 className="text-4xl font-medium mt-4">About Me</h2>
-        <p className="mt-4 mx-4 sm:mx-4 md:mx-0 lg:mx-0 xl:mx-0 max-w-2xl text-lg text-center ">
+      <EvervaultCard>
+      <div className="flex flex-col items-center justify-center text-gray-200 ">
+        <img src="/assets/family.jpg" alt="Family Photo" width={300} height={300} className="rounded-lg border-4 border-gray-200" draggable={false} />
+          <h2 className="text-4xl font-medium mt-12">About Me</h2>
+          <p className="mt-4 mx-4 sm:mx-4 md:mx-0 lg:mx-0 xl:mx-0 max-w-2xl text-lg text-center">
         {typedAboutText}
         </p>
       </div>
 
       {/* Skills Section */}
-      <div className="py-12 primary-bg pb-14">
-        <h2 className="text-center pb-12 text-4xl text-gray-200 font-medium">Skills</h2>
+      <div className="py-12 pb-14">
+        <h2 className="text-center pb-12 pt-12 text-4xl text-gray-200 font-medium">Skills</h2>
         <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-10 lg:mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
           {/* Programming Languages */}
           <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1">
@@ -128,6 +129,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      </EvervaultCard>
 
 
       <Footer/>

@@ -1,18 +1,44 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Navbar from "./components/Navbar.js"
 import Footer from "./components/Footer.js"
 import EmailModal from "./components/EmailModal.js";
 import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from 'react-icons/fa';
 
 import Head from 'next/head';
-import { EvervaultCard } from './components/profileDyanmic'
+import { EvervaultCard } from './components/profileDynamic'
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loadingProject1, setLoadingProject1] = useState(true); // Loading state for Project 1
   const [loadingProject2, setLoadingProject2] = useState(true); // Loading state for Project 2
+  const [isVisible, setIsVisible] = useState(false); // State to track if the section is visible
+  const sectionRef = useRef(null); // Ref for the section to animate
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(sectionRef.current); // Stop observing once animation is triggered
+        }
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the element is visible
+      }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []); 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   
@@ -69,42 +95,53 @@ export default function Home() {
         </div>
 
         {/* <div className="border w-screen mt-12"></div> */}
-        <h2 id="featured-projects" className="text-center pb-12 pt-40 text-4xl font-medium">Featured Projects</h2>
+        <h2 id="featured-projects" className={`text-center pb-12 pt-40 text-4xl font-medium ${isVisible ? 'animate-slideIn' : 'opacity-0'}`} ref={sectionRef}>eatured Projects</h2>
         <div className="flex flex-col gap-10 ">
-          <div className="flex flex-col p-8 mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center">
+          <div className="flex flex-col p-8 mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center animate-slideIn">
             <div className="flex flex-row items-center mb-8 justify-between w-full">
               <h1 className="text-2xl md:text-4xl font-medium">ShopEasy</h1>
               <a href="https://github.com/Yotham/ShopEasy" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <FaGithub className="icon-standard" />
               </a>
             </div>
-            <div className="flex flex-col sm:flex-col md:flex-col lg-flex-row xl:flex-row gap-8">
-              {/* <div className="aspect-w-16 aspect-h-9" style={{ maxWidth: '50%', maxHeight: '50%' }}>
-                <iframe className="w-full h-full rounded-lg border-2 border-gray-200" src="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview" allowFullScreen onLoad={() => {console.log("Project 1 iframe loaded"); setLoadingProject1(false)}} style={{ minWidth: '480px', minHeight: '270px' }}></iframe> 
-              }*/}
-                <div className="relative">
-                  <img src="assets/shopeasyThumbnail.png" alt="Project Image" className="w-80 md:w-full md:max-w-xl rounded-lg object-cover border-2 border-gray-200 even-shadow" draggable={false} />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row gap-8 ">
+              <div className="relative">
+                <img
+                  src="assets/shopeasyThumbnail.png"
+                  alt="Project Image"
+                  className="w-80 md:w-full md:max-w-xl rounded-lg object-cover border-2 border-gray-200 even-shadow"
+                  draggable={false}
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 bg-black opacity-50"></div>
-                  <a href="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview" target="_blank" rel="noopener noreferrer" className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300">View Demo</a>
-                  </div>
+                  <a
+                    href="https://drive.google.com/file/d/1mdlhZb7fk78ssrOYwtEkyH11-IThMQxp/preview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bg-gray-200 text-black rounded shadow p-2 hover:bg-gray-300"
+                  >
+                    View Demo
+                  </a>
                 </div>
-              <p className="max-w-xs md:max-w-xl">A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.</p>
+              </div>
+              <p className="max-w-xs md:max-w-xl">
+                A web and mobile application, which takes in user data such as age, weight, height, and gender. Then uses this data to generate grocery list suited for the user{"'"}s dietary needs, from a selected grocery store.
+              </p>
             </div>
+
             <div className="mt-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-md md:text-xl font-medium items-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-start text-center text-md md:text-xl font-medium items-center">
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Python</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">React.js</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Next.js</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">MongoDB</div>
                 <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">HTML</div>
-                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Tailwind CSS</div> 
+                <div className="bg-gray-200 text-black rounded shadow p-1 hover:bg-gray-300">Tailwind CSS</div>
               </div>
             </div>
 
-
           </div>
-          <div className="flex flex-col p-8  mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center">
+          <div className="flex flex-col p-8  mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center animate-slideIn">
             <div className="flex flex-row items-center mb-8 justify-between w-full">
               <h1 className="text-2xl md:text-4xl font-medium">Best Professors</h1>
               <a href="https://github.com/Yotham/BestProfessors" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
