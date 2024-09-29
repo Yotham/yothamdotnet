@@ -95,7 +95,7 @@ export default function Home() {
         </div>
 
         {/* <div className="border w-screen mt-12"></div> */}
-        <h2 id="featured-projects" className={`text-center pb-12 pt-40 text-4xl font-medium ${isVisible ? 'animate-slideIn' : 'opacity-0'}`} ref={sectionRef}>eatured Projects</h2>
+        <h2 id="featured-projects" className="text-center pb-12 pt-40 text-4xl font-medium">Featured Projects</h2>
         <div className="flex flex-col gap-10 ">
           <div className="flex flex-col p-8 mx-8 md:mx-auto border-2 rounded-lg even-shadow primary-bg text-gray-200 border-gray-200 justify-center animate-slideIn">
             <div className="flex flex-row items-center mb-8 justify-between w-full">
