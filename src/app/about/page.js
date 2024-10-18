@@ -32,7 +32,24 @@ const useTypewriter = (text, typingSpeed = 150, startTyping = false) => {
 };
 
 
+
 export default function About() {
+  const skills = [
+    { icon: <FaPython className="text-6xl" />, name: "Python" },
+    { icon: <FaJsSquare className="text-6xl" />, name: "JavaScript" },
+    { icon: <SiCplusplus className="text-6xl" />, name: "C++" },
+    { icon: <CIcon className="text-6xl" />, name: "C" },
+    { icon: <DiJava className="text-6xl" />, name: "Java" },
+    { icon: <FaHtml5 className="text-6xl" />, name: "HTML5" },
+    { icon: <FaCss3Alt className="text-6xl" />, name: "CSS3" },
+    { icon: <SiPostgresql className="text-6xl" />, name: "PostgreSQL" },
+    { icon: <SiMongodb className="text-6xl" />, name: "MongoDB" },
+    { icon: <PiFileSqlThin className="text-6xl" />, name: "SQL" },
+    { icon: <FaReact className="text-6xl" />, name: "React" },
+    { icon: <SiNextdotjs className="text-6xl" />, name: "Next.js" },
+    { icon: <FaLinux className="text-6xl" />, name: "Linux" },
+    { icon: <SiSap className="text-6xl" />, name: "SAP" },
+  ];
 
   const [isLoading, setIsLoading] = useState(true); // State to control the loading state
   useEffect(() => {
@@ -72,62 +89,22 @@ export default function About() {
         {typedAboutText}
         </p>
       </div>
-
-      {/* Skills Section */}
-      <div className="py-12 pb-14">
-        <h2 className="text-center pb-12 pt-12 text-4xl text-gray-200 font-medium">Skills</h2>
-        <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-10 lg:mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
-          {/* Programming Languages */}
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1">
-            <FaPython className="text-6xl" />
+        {/* Skills Section */}
+        <div className="py-12 pb-14">
+          <h2 className="text-center pb-12 pt-12 text-4xl text-gray-200 font-medium">Skills</h2>
+          <div className="primary-bg even-shadow border-2 border-gray-200 p-10 rounded-lg max-w-6xl mx-10 lg:mx-auto px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-10 ">
+            {/* Loop through skills */}
+            {skills.map((skill, index) => (
+              <div key={index} className="relative flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 group">
+                {/* Skill Icon */}
+                {skill.icon}
+                {/* Tooltip */}
+                <div className="absolute bottom-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-sm rounded-md py-1 px-2">
+                  {skill.name}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <FaJsSquare className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <SiCplusplus className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center pt-2 skill-icon bg-gray-200 rounded-lg">
-            {/* Placeholder for C */}
-            <CIcon className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <DiJava className="text-6xl" /> 
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <FaHtml5 className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <FaCss3Alt className="text-6xl" />
-          </div>
-
-          {/* Databases */}
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <SiPostgresql className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <SiMongodb className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <PiFileSqlThin className="text-6xl" />
-          </div>
-
-          {/* Frameworks/Libraries */}
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <FaReact className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <SiNextdotjs className="text-6xl" />
-          </div>
-
-          {/* Tools/Operating Systems */}
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <FaLinux className="text-6xl" />
-          </div>
-          <div className="flex flex-col items-center skill-icon bg-gray-200 rounded-lg p-1 ">
-            <SiSap className="text-6xl" />
-          </div>
-        </div>
       </div>
       </EvervaultCard>
 
